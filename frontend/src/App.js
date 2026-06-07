@@ -29,7 +29,7 @@ function App() {
   const chunksRef = useRef([]);
   const streamRef = useRef(null);
 
-  const API = "https://prepai-backend.onrender.com";
+  const API = "https://prepai-gfxh.onrender.com";
 
   const selectDomain = async (d) => {
     setDomain(d);
