@@ -12,7 +12,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://prepaicoach.netlify.app/"])
 
 model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
