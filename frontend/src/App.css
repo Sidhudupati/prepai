@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f8fa;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* ---------- Header ---------- */
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+h1 .accent {
+  color: #4f46e5;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04),
+    0 8px 24px rgba(16, 24, 40, 0.04);
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ---------- Domain selection ---------- */
+.domains {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.domain-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 22px 20px;
+  border: 1.5px solid #ececf1;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: left;
+}
+
+.domain-btn:hover {
+  border-color: #4f46e5;
+  background: #fafaff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
+}
+
+.domain-icon {
+  font-size: 24px;
+}
+
+.domain-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+/* ---------- Progress ---------- */
+.progress-bar {
+  height: 6px;
+  background: #ececf1;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4f46e5;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4f46e5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.question-text {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+/* ---------- Video ---------- */
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #14141f;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #14141f;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.video-placeholder .cam-icon {
+  font-size: 36px;
+  opacity: 0.5;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.btn-stop {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-stop:hover {
+  background: #dc2626;
+}
+
+.btn-ghost {
+  background: #fff;
+  border: 1.5px solid #ececf1;
+  color: #1a1a2e;
+}
+
+.btn-ghost:hover {
+  border-color: #4f46e5;
+  color: #4f46e5;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rec-dot {
+  width: 9px;
+  height: 9px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ---------- Status text ---------- */
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 18px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ececf1;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Results ---------- */
+.overall {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
+}
+
+.overall-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.overall-score {
+  font-size: 56px;
+  font-weight: 800;
+  color: #4f46e5;
+  line-height: 1.1;
+  margin: 6px 0;
+}
+
+.overall-score span {
+  font-size: 24px;
+  color: #9ca3af;
+}
+
+.result-card {
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.result-q {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.score-badge {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.score-high { background: #dcfce7; color: #15803d; }
+.score-mid  { background: #fef9c3; color: #a16207; }
+.score-low  { background: #fee2e2; color: #b91c1c; }
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 18px 0 8px;
+}
+
+.transcription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #374151;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.improvements {
+  list-style: none;
+}
+
+.improvements li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #374151;
+}
+
+.improvements li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.video-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.video-wrap .video {
+  margin-bottom: 0;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: #14141f;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.video-overlay .cam-icon {
+  font-size: 36px;
+  opacity: 0.6;
+}
